@@ -6,23 +6,22 @@
 
 const amkdirp = require('../lib/amkdirp.js')
 const assert = require('assert')
-const co = require('co')
 
 describe('amkdirp', function () {
   this.timeout(3000)
 
-  before(() => co(function * () {
+  before(async () => {
 
-  }))
+  })
 
-  after(() => co(function * () {
+  after(async () => {
 
-  }))
+  })
 
-  it('Amkdirp', () => co(function * () {
+  it('Amkdirp', async () => {
     let dirname = `${__dirname}/../tmp/foo/bar/baz`
-    yield amkdirp(dirname)
-  }))
+    await amkdirp(dirname)
+  })
 })
 
 /* global describe, before, after, it */
